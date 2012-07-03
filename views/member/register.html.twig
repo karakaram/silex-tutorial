@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<link href="/silex/web/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/silex/web/js/bootstrap.min.js"></script>
+<title></title>
+</head>
+<body>
+<div id="wrapper">
+<header id="header">
+<h1><a href="/">Silex Tutor</a></h1>
+</header>
+<div id="content">
+<h2>会員登録</h2>
+<form action="/silex/web/member/register" method="post" class="well">
+    <label>メールドレス</label>
+    <div class="control-group">
+        <input type="text" name="member[email]" value="" />
+    </div>
+    <label>パスワード</label>
+    <div class="control-group">
+        <input type="password" name="member[password]" value="" />
+    </div>
+    <button type="submit" class="btn">登録</button>
+</form>
+</div><!-- // content -->
+</div><!-- // wrapper -->
+</body>
+</html>
