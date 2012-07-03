@@ -1,0 +1,12 @@
+{
+    "require":{
+        "silex/silex": "1.0.*",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "doctrine/dbal": "2.2.*",
+        "doctrine/common": "2.2.*",
+        "symfony/form": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": { "SilexTutorial": "src/"}
+    }
+}
