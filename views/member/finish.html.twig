@@ -1,15 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta charset="UTF-8" />
+<link href="/silex/web/css/bootstrap.min.css" rel="stylesheet" />
+<script src="/silex/web/js/bootstrap.min.js"></script>
 <title></title>
 </head>
 <body>
-ｵﾜﾀ＼(＾o＾)／
-
-<br/>
-{{ member.email }}<br/>
-{{ member.password }} 
-
+<div id="wrapper">
+<header id="header">
+<h1><a href="/">Silex Tutor</a></h1>
+</header>
+<div id="content">
+<h2>莨壼藤逋ｻ骭ｲ螳御ｺ�</h2>
+<div class="well">
+    <label>繝｡繝ｼ繝ｫ繝峨Ξ繧ｹ</label>
+    <div class="control-group">
+    {{ member.email }}
+    </div>
+    <label>繝代せ繝ｯ繝ｼ繝�</label>
+    <div class="control-group">
+    {{ member.password }} 
+</div>
+</div><!-- // content -->
+</div><!-- // wrapper -->
 </body>
 </html>
