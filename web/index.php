@@ -17,11 +17,14 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     )
 ));
 
-$app->get('/member/register', function() use($app) { 
+$app->get('/', function() use($app) { 
+}); 
+
+$app->get('/silex/web/member/register', function() use($app) { 
     return $app['twig']->render('member/register.html.twig');
 }); 
 
-$app->post('/member/register', function() use($app){
+$app->post('/silex/web/member/register', function() use($app){
     $request = $app['request'];
     $member = $request->get('member');
 
