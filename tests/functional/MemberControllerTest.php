@@ -16,8 +16,8 @@ class MemberControllerTest extends WebTestCase
                 'driver'   => 'pdo_mysql',
                 'dbname'   => 'silex',
                 'host'     => 'localhost',
-                'user'     => '',
-                'password' => ''
+                'user'     => 'admin',
+                'password' => 'admin'
             ),
         ));
 
@@ -37,7 +37,7 @@ class MemberControllerTest extends WebTestCase
     public function testMemberRegistration()
     {
         $client = $this->createClient();
-        $crawler = $client->request('GET', '/silex/web/member/register');
+        $crawler = $client->request('GET', '/member/register');
         $this->assertTrue($client->getResponse()->isSuccessful());
         $this->assertSame(1, $crawler->filter('title:contains("会員登録")')->count());
 

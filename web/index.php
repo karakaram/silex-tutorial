@@ -12,19 +12,16 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
         'driver' => 'pdo_mysql',
         'dbname' => 'silex',
         'host' => 'localhost',
-        'user' => '',
-        'password' => ''
+        'user' => 'admin',
+        'password' => 'admin'
     )
 ));
 
-$app->get('/', function() use($app) { 
-}); 
-
-$app->get('/silex/web/member/register', function() use($app) { 
+$app->get('/member/register', function() use($app) { 
     return $app['twig']->render('member/register.html.twig');
 }); 
 
-$app->post('/silex/web/member/register', function() use($app){
+$app->post('/member/register', function() use($app){
     $request = $app['request'];
     $member = $request->get('member');
 
