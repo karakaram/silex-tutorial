@@ -34,7 +34,7 @@ class MemberControllerTest extends WebTestCase
         return $app;
     }
 
-    public function testMemberRegistration()
+    public function testMemberRegister()
     {
         $client = $this->createClient();
         $crawler = $client->request('GET', '/member/register');

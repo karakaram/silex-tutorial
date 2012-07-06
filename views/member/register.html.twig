@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<link href="/silex/web/css/bootstrap.min.css" rel="stylesheet" />
-<script src="/silex/web/js/bootstrap.min.js"></script>
+<link href="{{ app.request.baseUrl }}/css/bootstrap.min.css" rel="stylesheet" />
+<script src="{{ app.request.baseUrl }}/js/bootstrap.min.js"></script>
 <title>会員登録</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 </header>
 <div id="content">
 <h2>会員登録</h2>
-<form action="/member/register" method="post" class="well">
+<form action="{{ app.request.baseUrl }}/member/register" method="post" class="well">
     <label>メールドレス</label>
     <div class="control-group">
         <input type="text" name="member[email]" value="" />

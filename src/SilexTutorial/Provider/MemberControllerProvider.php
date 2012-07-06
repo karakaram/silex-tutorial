@@ -17,21 +17,12 @@ class MemberControllerProvider implements ControllerProviderInterface
         });
 
         $controllers->post('/register', function(Application $app) {
-            $request = $app['request'];
-            $member = $request->get('member');
+            $data = $app['request']->get('member');
 
-            $stmt = $app['db']->prepare("
-               INSERT INTO member SET
-                 email = :email
-                ,password = :password
-            ");
-            $stmt->bindParam(':email', $member['email']);
-            $password = md5($member['password']);
-            $stmt->bindParam(':password', $password);
-            $stmt->execute();
+            $app['member']->register($data);
 
             return $app['twig']->render('member/finish.html.twig', array(
-                'member' => $member
+                'member' => $data
             ));
         });
 
