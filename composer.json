@@ -9,13 +9,13 @@
             "url": "http://pear.phpunit.de"
         }
     ],
-    "require":{
+    "minimum-stability": "dev",
+    "require": {
         "silex/silex": "1.0.*",
-        "twig/twig": ">=1.8,<2.0-dev",
-        "pear-phpunit/PHPUnit": "*",
+        "twig/twig": "1.8.*",
         "doctrine/dbal": "2.2.*",
         "doctrine/common": "2.2.*",
-        "symfony/form": "2.1.*",
+        "pear-phpunit/PHPUnit": "*",
         "symfony/browser-kit": "2.1.*",
         "symfony/dom-crawler": "2.1.*",
         "symfony/css-selector": "2.1.*"
