@@ -23,7 +23,6 @@ $app->register(new SilexTutorial\Provider\MemberServiceProvider());
 $app->mount('/member', new SilexTutorial\Provider\MemberControllerProvider());
 
 $app->get('/', function() use($app) {
-})
-->bind('homepage');
+});
 
 $app->run(); 
